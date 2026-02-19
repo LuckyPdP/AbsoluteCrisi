@@ -1524,12 +1524,14 @@ PrefabInstance:
         type: 3}
       propertyPath: conversacion.Array.data[1].retrato
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -1370634396, guid: 00b0eb3cd5a56434582ae7f5f82b716b,
+        type: 3}
     - target: {fileID: 467758493234508718, guid: 19a8ffd6814359145b340616e2d0b82b,
         type: 3}
       propertyPath: conversacion.Array.data[2].retrato
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1361518359, guid: 00b0eb3cd5a56434582ae7f5f82b716b,
+        type: 3}
     - target: {fileID: 467758493234508718, guid: 19a8ffd6814359145b340616e2d0b82b,
         type: 3}
       propertyPath: conversacion.Array.data[3].retrato
