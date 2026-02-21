@@ -5,17 +5,11 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/inicio.unity
-    guid: bd8135e4089942c4195e00acfcd62e3c
-  - enabled: 0
-    path: Assets/Scenes/Napmess.unity
-    guid: 628235bfc0d22d64eac167b20aefc9a5
-  - enabled: 0
-    path: Assets/Scenes/Fin.unity
-    guid: 1fdb1e8e2cada094c9d4f8b7c36b1d46
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PruebaPointAndClick.unity
     guid: fdbeaad734dab41469f385cf0eefe9cb
+  - enabled: 1
+    path: Assets/Scenes/Casa y pasillo.unity
+    guid: 265eff132889a2f4b8bd5e6ab176255e
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

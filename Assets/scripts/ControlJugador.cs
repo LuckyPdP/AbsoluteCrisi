@@ -93,11 +93,21 @@ public class ControlJugador : MonoBehaviour
 
     void movePlayer()
     {
+        // Leer entrada del teclado
+        float moverX = Input.GetAxis("Horizontal"); // A/D o flechas 
+        float moverZ = Input.GetAxis("Vertical");   // W/S o flechas 
+
+        // Crear vector de movimiento
+        Vector3 movimiento = new Vector3(moverX, 0f, moverZ);
+
+        // Mover el objeto
+        transform.Translate(movimiento * speed * Time.deltaTime);
+
 
         //rb.AddForce(movedir.normalized * speed, ForceMode.Force);
-        movedir = transform.right * inputHorizontal + transform.forward * inputVertical;
+        //   movedir = transform.right * inputHorizontal + transform.forward * inputVertical;
 
-        rb.linearVelocity = movedir.normalized * speed + transform.up * rb.linearVelocity.y;
+        //   rb.linearVelocity = movedir.normalized * speed + transform.up * rb.linearVelocity.y;
 
 
         //new Vector3(inputHorizontal, 0, inputVertical);

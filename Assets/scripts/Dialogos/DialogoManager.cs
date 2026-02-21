@@ -5,29 +5,29 @@ using TMPro;
 
 public class DialogoManager : MonoBehaviour
 {
-   // public AudioSource Voces;
+    // public AudioSource Voces;
 
     [System.Serializable]
-    public struct Decision
+    public class Decision
     {
         public string textoBoton;
-        public int indiceDestino; 
+        public int indiceDestino;
     }
 
     [System.Serializable]
-    public struct Frase
+    public class Frase
     {
         [TextArea] public string texto;
-        public Sprite retrato;       
-        public Decision[] opciones; 
+        public Sprite retrato;
+        public Decision[] opciones;
     }
 
 
     public Image personajeImagen;
 
     public TextMeshProUGUI DialogueText;
-    public GameObject panelBotones; 
-    public Button[] botonesUI; 
+    public GameObject panelBotones;
+    public Button[] botonesUI;
     public Frase[] conversacion;
 
     private int index = 0;
@@ -40,21 +40,37 @@ public class DialogoManager : MonoBehaviour
         MostrarFrase();
     }
 
+    public void IniciarDialogo()
+    {
+        panelDialogo.SetActive(true);
+        index = 0;
+        MostrarFrase();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !escribiendo && conversacion[index].opciones.Length == 0)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.F))
         {
-            SiguienteFrase();
-        }
-        if (Input.GetKeyDown(KeyCode.F) && !escribiendo && conversacion[index].opciones.Length == 0)
-        {
-            SiguienteFrase();
+            if (escribiendo)
+            {
+                StopAllCoroutines();
+                DialogueText.text = conversacion[index].texto;
+                escribiendo = false;
+
+                if (conversacion[index].opciones.Length > 0)
+                    MostrarOpciones();
+            }
+            else if (conversacion[index].opciones.Length == 0)
+            {
+                SiguienteFrase();
+            }
         }
     }
+
     
 
 
-    public GameObject panelDialogo; 
+    public GameObject panelDialogo;
 
     public void SiguienteFrase()
     {
@@ -72,6 +88,7 @@ public class DialogoManager : MonoBehaviour
     void FinalizarDialogo()
     {
         panelDialogo.SetActive(false);
+        index = 0;
     }
 
 
@@ -90,7 +107,7 @@ public class DialogoManager : MonoBehaviour
 
     IEnumerator EscribirFrase()
     {
-      //  Voces.Play();
+        //  Voces.Play();
         escribiendo = true;
         DialogueText.text = "";
         panelBotones.SetActive(false);
