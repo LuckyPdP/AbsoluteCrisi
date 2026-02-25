@@ -124,28 +124,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e0e1a7a4bc20b4458b730e9425e2d66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogoManager
+  controladorJugador: {fileID: 0}
+  Cameramovement: {fileID: 0}
   personajeImagen: {fileID: 3256819045199982811}
-  personajeImagen2: {fileID: 117762473080711435}
   DialogueText: {fileID: 7779785643361295334}
   panelBotones: {fileID: 1997732794019675695}
   botonesUI:
   - {fileID: 0}
   conversacion:
-  - texto: '   '
-    retrato: {fileID: 0}
-    retrato2: {fileID: 0}
-    opciones: []
   - texto: Hola, soy yo
-    retrato: {fileID: 692507179, guid: 00b0eb3cd5a56434582ae7f5f82b716b, type: 3}
-    retrato2: {fileID: 0}
+    retrato: {fileID: 21300000, guid: 487ea8f4563a94f409ec7ca81112d3cf, type: 3}
     opciones: []
   - texto: Menti soy este
-    retrato: {fileID: -1370634396, guid: 00b0eb3cd5a56434582ae7f5f82b716b, type: 3}
-    retrato2: {fileID: 0}
+    retrato: {fileID: 1361518359, guid: 00b0eb3cd5a56434582ae7f5f82b716b, type: 3}
     opciones: []
   - texto: RAAAAAAAAAAAAAHG!!
     retrato: {fileID: 1361518359, guid: 00b0eb3cd5a56434582ae7f5f82b716b, type: 3}
-    retrato2: {fileID: 0}
+    opciones: []
+  - texto: eeeeeeeeeeeeee
+    retrato: {fileID: 1361518359, guid: 00b0eb3cd5a56434582ae7f5f82b716b, type: 3}
     opciones: []
   dialogueSpeed: 0.005
   panelDialogo: {fileID: 4554092952353840470}

@@ -7,6 +7,11 @@ public class DialogoManager : MonoBehaviour
 {
     // public AudioSource Voces;
 
+    [Header("Control del Jugador")]
+    public MonoBehaviour controladorJugador;
+    public MonoBehaviour Cameramovement;
+
+
     [System.Serializable]
     public class Decision
     {
@@ -43,6 +48,13 @@ public class DialogoManager : MonoBehaviour
     public void IniciarDialogo()
     {
         panelDialogo.SetActive(true);
+
+        if (controladorJugador != null)
+            controladorJugador.enabled = false;
+
+        if (Cameramovement != null)
+            Cameramovement.enabled = false;
+
         index = 0;
         MostrarFrase();
     }
@@ -88,6 +100,13 @@ public class DialogoManager : MonoBehaviour
     void FinalizarDialogo()
     {
         panelDialogo.SetActive(false);
+
+        if (controladorJugador != null)
+            controladorJugador.enabled = true;
+
+        if (Cameramovement != null)
+            Cameramovement.enabled = true;
+
         index = 0;
     }
 
