@@ -1,0 +1,68 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+
+public class MenuPausa : MonoBehaviour
+{
+
+    public GameObject MenuDePausa;
+    public string Samplescene;
+    public string MenudeInicio;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+           Cursor.lockState = CursorLockMode.Locked;
+           Cursor.visible = false;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Pausa();
+        }
+
+        
+    }
+
+    public void Pausa()
+    {
+        Time.timeScale = 0f;
+        MenuDePausa.SetActive(true);
+        Cursor.visible = true;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+
+    }
+
+    public void Reanudar()
+    {
+        Time.timeScale = 1f;
+        MenuDePausa.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    public void Reiniciar()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(Samplescene);
+    }
+
+    public void MenuDeInicio()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(MenudeInicio);
+    }
+
+    public void quit()
+    {
+
+        Application.Quit();
+
+    }
+
+}
