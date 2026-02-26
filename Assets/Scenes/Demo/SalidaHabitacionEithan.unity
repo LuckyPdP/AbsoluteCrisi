@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3202689074c3cc44906a01102d98e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::boton
-  Samplescene: 
+  Samplescene: HabitacionEithan
 --- !u!1 &172867931
 GameObject:
   m_ObjectHideFlags: 0
@@ -591,13 +591,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 53757371}
+        m_TargetAssemblyTypeName: boton, Assembly-CSharp
+        m_MethodName: Empezar
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
