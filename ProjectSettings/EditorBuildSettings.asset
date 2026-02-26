@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Casa y pasillo.unity
     guid: 265eff132889a2f4b8bd5e6ab176255e
+  - enabled: 1
+    path: Assets/Scenes/Demo/Ganas.unity
+    guid: 1f5ef3169fd95054db1dee1a3a90918e
+  - enabled: 1
+    path: Assets/Scenes/Demo/Pierdes.unity
+    guid: db7463917e2adbd42bd28aa8e24159b3
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
