@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Casa y pasillo.unity
     guid: 265eff132889a2f4b8bd5e6ab176255e
   - enabled: 1
+    path: Assets/Scenes/Demo/EscenaJuegoFinalDemo.unity
+    guid: 0cc8f8679920812419cb86a97b9ee583
+  - enabled: 1
     path: Assets/Scenes/Demo/Ganas.unity
     guid: 1f5ef3169fd95054db1dee1a3a90918e
   - enabled: 1
