@@ -43,6 +43,8 @@ public class DialogoManager : MonoBehaviour
     {
         panelBotones.SetActive(false);
         MostrarFrase();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void IniciarDialogo()
@@ -106,7 +108,8 @@ public class DialogoManager : MonoBehaviour
 
         if (Cameramovement != null)
             Cameramovement.enabled = true;
-
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         index = 0;
     }
 
@@ -114,6 +117,7 @@ public class DialogoManager : MonoBehaviour
     void MostrarFrase()
     {
         StopAllCoroutines();
+        Cursor.lockState = CursorLockMode.None;
 
         if (personajeImagen != null)
         {
@@ -127,6 +131,9 @@ public class DialogoManager : MonoBehaviour
     IEnumerator EscribirFrase()
     {
         //  Voces.Play();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         escribiendo = true;
         DialogueText.text = "";
         panelBotones.SetActive(false);
