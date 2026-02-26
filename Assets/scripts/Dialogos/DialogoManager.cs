@@ -49,7 +49,10 @@ public class DialogoManager : MonoBehaviour
 
     public void IniciarDialogo()
     {
+
         panelDialogo.SetActive(true);
+
+        MostrarCursor();
 
         if (controladorJugador != null)
             controladorJugador.enabled = false;
@@ -63,6 +66,8 @@ public class DialogoManager : MonoBehaviour
 
     void Update()
     {
+        if (!panelDialogo.activeInHierarchy) return;
+
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F))
         {
             if (escribiendo)
@@ -103,21 +108,23 @@ public class DialogoManager : MonoBehaviour
     {
         panelDialogo.SetActive(false);
 
+        OcultarCursor();
+
         if (controladorJugador != null)
             controladorJugador.enabled = true;
 
         if (Cameramovement != null)
             Cameramovement.enabled = true;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        
         index = 0;
     }
 
 
     void MostrarFrase()
     {
-        StopAllCoroutines();
-        Cursor.lockState = CursorLockMode.None;
+        
+            
+        
 
         if (personajeImagen != null)
         {
@@ -177,4 +184,19 @@ public class DialogoManager : MonoBehaviour
         index = destino;
         MostrarFrase();
     }
+
+    void MostrarCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    void OcultarCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+
+
 }
