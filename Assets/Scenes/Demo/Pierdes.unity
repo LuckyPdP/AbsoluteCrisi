@@ -727,7 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3202689074c3cc44906a01102d98e3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::boton
-  Samplescene: PruebaPointAndClick
+  Samplescene: Inicio
 --- !u!4 &895724568
 Transform:
   m_ObjectHideFlags: 0

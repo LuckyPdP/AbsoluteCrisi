@@ -4,12 +4,12 @@ public class Fade : MonoBehaviour
 {
 
     public Animator anim;
-    public GameObject FadeIn;
+  //  public GameObject FadeIn;
 
 
     void Update()
     {
-        FadeIn.SetActive(true);
+   //     FadeIn.SetActive(true);
 
     }
 
