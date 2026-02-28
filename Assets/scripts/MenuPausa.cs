@@ -16,12 +16,25 @@ public class MenuPausa : MonoBehaviour
            Cursor.visible = false;
     }
 
+
+    private bool juegoPausado = false;
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Pausa();
+            if (juegoPausado)
+            {
+                Reanudar();
+            }
+            else
+            {
+                Pausa();
+
+            }
+
+
         }
 
         
@@ -29,6 +42,7 @@ public class MenuPausa : MonoBehaviour
 
     public void Pausa()
     {
+        juegoPausado=true;
         Time.timeScale = 0f;
         MenuDePausa.SetActive(true);
         Cursor.visible = true;
@@ -44,6 +58,8 @@ public class MenuPausa : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        juegoPausado = false;
+
     }
 
     public void Reiniciar()
