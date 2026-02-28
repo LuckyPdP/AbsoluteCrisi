@@ -3399,7 +3399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c58cb61dc0f76478abbd80e6b59b69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlJugadorCleaner
-  speed: 10
+  speed: 15
   fuerzaSalto: 7
   OrigenPruebaSuelo: {fileID: 698913685}
   RadioEsferaSuelo: 0.5
@@ -3546,7 +3546,7 @@ PrefabInstance:
     - target: {fileID: 3275600281956671746, guid: b54ea047eb2348a4d8b05350100c6ded,
         type: 3}
       propertyPath: sensibilidad
-      value: 300
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: 3275600281956671746, guid: b54ea047eb2348a4d8b05350100c6ded,
         type: 3}

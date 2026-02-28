@@ -195,6 +195,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 794777257}
     m_Modifications:
+    - target: {fileID: 795367112308248273, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_margin.x
+      value: -116.247505
+      objectReference: {fileID: 0}
+    - target: {fileID: 795367112308248273, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -114.70956
+      objectReference: {fileID: 0}
     - target: {fileID: 3081720393847469452, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_Pivot.x
@@ -306,10 +316,35 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 352674101}
+    - target: {fileID: 4261808694321494241, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4505558943343153076, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 274.7128
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 26.1762
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 523
+      objectReference: {fileID: 0}
+    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -204.52838
       objectReference: {fileID: 0}
     - target: {fileID: 4906001955765636405, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
@@ -918,10 +953,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -938,7 +973,7 @@ Canvas:
   m_GameObject: {fileID: 794777253}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
