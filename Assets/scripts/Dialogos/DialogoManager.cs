@@ -2,15 +2,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
+using UnityEngine.Events;
 
 public class DialogoManager : MonoBehaviour
 {
-    // public AudioSource Voces;
-
     [Header("Control del Jugador")]
     public MonoBehaviour controladorJugador;
     public MonoBehaviour Cameramovement;
 
+    [Header("Evento al Finalizar")]
+    public UnityEvent OnDialogoFinalizado;
 
     [System.Serializable]
     public class Decision
@@ -19,21 +20,31 @@ public class DialogoManager : MonoBehaviour
         public int indiceDestino;
     }
 
+    public enum LadoRetrato
+    {
+        Izquierda,
+        Derecha
+    }
+
     [System.Serializable]
     public class Frase
     {
         [TextArea] public string texto;
         public Sprite retrato;
+        public LadoRetrato lado;
         public Decision[] opciones;
     }
 
-
-    public Image personajeImagen;
+    [Header("UI Retratos")]
+    public Image retratoIzquierda;
+    public Image retratoDerecha;
 
     public TextMeshProUGUI DialogueText;
     public GameObject panelBotones;
     public Button[] botonesUI;
     public Frase[] conversacion;
+
+    public GameObject panelDialogo;
 
     private int index = 0;
     public float dialogueSpeed;
@@ -42,16 +53,13 @@ public class DialogoManager : MonoBehaviour
     void Start()
     {
         panelBotones.SetActive(false);
-        MostrarFrase();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     public void IniciarDialogo()
     {
-
         panelDialogo.SetActive(true);
-
         MostrarCursor();
 
         if (controladorJugador != null)
@@ -68,7 +76,7 @@ public class DialogoManager : MonoBehaviour
     {
         if (!panelDialogo.activeInHierarchy) return;
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.F) || Input.GetMouseButtonDown(0))
         {
             if (escribiendo)
             {
@@ -86,11 +94,6 @@ public class DialogoManager : MonoBehaviour
         }
     }
 
-    
-
-
-    public GameObject panelDialogo;
-
     public void SiguienteFrase()
     {
         if (index < conversacion.Length - 1)
@@ -107,7 +110,6 @@ public class DialogoManager : MonoBehaviour
     void FinalizarDialogo()
     {
         panelDialogo.SetActive(false);
-
         OcultarCursor();
 
         if (controladorJugador != null)
@@ -115,21 +117,33 @@ public class DialogoManager : MonoBehaviour
 
         if (Cameramovement != null)
             Cameramovement.enabled = true;
-        
-        index = 0;
-    }
 
+        index = 0;
+
+        // Invocar evento al finalizar
+        OnDialogoFinalizado?.Invoke();
+    }
 
     void MostrarFrase()
     {
-        
-            
-        
+        Frase fraseActual = conversacion[index];
 
-        if (personajeImagen != null)
+        // Activar retrato correcto
+        if (fraseActual.lado == LadoRetrato.Izquierda)
         {
-            personajeImagen.sprite = conversacion[index].retrato;
-            personajeImagen.gameObject.SetActive(conversacion[index].retrato != null);
+            retratoIzquierda.sprite = fraseActual.retrato;
+            retratoIzquierda.gameObject.SetActive(fraseActual.retrato != null);
+
+            retratoDerecha.color = new Color(1, 1, 1, 0.5f); // Atenuar
+            retratoIzquierda.color = Color.white;
+        }
+        else
+        {
+            retratoDerecha.sprite = fraseActual.retrato;
+            retratoDerecha.gameObject.SetActive(fraseActual.retrato != null);
+
+            retratoIzquierda.color = new Color(1, 1, 1, 0.5f); // Atenuar
+            retratoDerecha.color = Color.white;
         }
 
         StartCoroutine(EscribirFrase());
@@ -137,10 +151,6 @@ public class DialogoManager : MonoBehaviour
 
     IEnumerator EscribirFrase()
     {
-        //  Voces.Play();
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-
         escribiendo = true;
         DialogueText.text = "";
         panelBotones.SetActive(false);
@@ -152,21 +162,22 @@ public class DialogoManager : MonoBehaviour
         }
 
         escribiendo = false;
+
         if (conversacion[index].opciones.Length > 0)
-        {
             MostrarOpciones();
-        }
     }
 
     void MostrarOpciones()
     {
         panelBotones.SetActive(true);
+
         for (int i = 0; i < botonesUI.Length; i++)
         {
             if (i < conversacion[index].opciones.Length)
             {
                 botonesUI[i].gameObject.SetActive(true);
                 Decision decision = conversacion[index].opciones[i];
+
                 botonesUI[i].GetComponentInChildren<TextMeshProUGUI>().text = decision.textoBoton;
 
                 botonesUI[i].onClick.RemoveAllListeners();
@@ -196,7 +207,4 @@ public class DialogoManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
-
-
-
 }
