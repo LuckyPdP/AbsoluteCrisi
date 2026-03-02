@@ -195,16 +195,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 794777257}
     m_Modifications:
-    - target: {fileID: 795367112308248273, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_margin.x
-      value: -116.247505
-      objectReference: {fileID: 0}
-    - target: {fileID: 795367112308248273, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -114.70956
-      objectReference: {fileID: 0}
     - target: {fileID: 3081720393847469452, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_Pivot.x
@@ -305,51 +295,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3208565416372445753, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 983b917c8d931ec41a6bdecaa2ff1f6e,
-        type: 3}
     - target: {fileID: 3780324082683762214, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 352674101}
-    - target: {fileID: 4385199225581188716, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4385199225581188716, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 344
-      objectReference: {fileID: 0}
     - target: {fileID: 4505558943343153076, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 274.7128
-      objectReference: {fileID: 0}
-    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 26.1762
-      objectReference: {fileID: 0}
-    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 523
-      objectReference: {fileID: 0}
-    - target: {fileID: 4621994825491290074, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -204.52838
       objectReference: {fileID: 0}
     - target: {fileID: 4906001955765636405, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
@@ -358,179 +312,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
-      propertyPath: conversacion.Array.size
-      value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[0].texto
-      value: "JOTA:\n\u2014 Pens\xE9 que te obligar\xEDan a descansar m\xE1s."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[1].texto
-      value: "EITHAN:\n\u2014 Ya tuve suficiente."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[2].texto
-      value: '(Jota me sostiene la mirada.)
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[3].texto
-      value: "JOTA:\n\u2014 No respirabas cuando te trajeron."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[4].texto
-      value: '(Me acerco al traje)
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[5].texto
-      value: "EITHAN:\n\u2014 Esto no es lo que dise\xF1\xE9."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[6].texto
-      value: "JOTA:\n\u2014 Es lo que pude salvar.\n\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[7].texto
-      value: "(Recorre con delicadeza la m\xE1scara del traje.)"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[8].texto
-      value: "EITHAN:\n\u2014 Falta el m\xF3dulo de presi\xF3n.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[9].texto
-      value: "JOTA:\n\u2014 Se quem\xF3. El n\xFAcleo colaps\xF3.\n"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[10].texto
-      value: "EITHAN:\n...\n\u2014 \xBFQu\xE9 est\xE1 fallando ahora?"
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[11].texto
-      value: "JOTA:\n\u2014 A los ocho minutos la presi\xF3n se dispara. El filtro
-        no aguanta y el sellado\u2026 es inestable."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[12].texto
-      value: '(Asiento apenas con la cabeza)
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[13].texto
-      value: "EITHAN:\n\u2014 Lo arreglar\xE9."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[14].texto
-      value: '(Jota me mira mientras le da una calada a su cigarrillo)
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[15].texto
-      value: "JOTA:\n\u2014 M\xE1s vale."
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[0].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 930bc8ead292ae144936dbff3badfb7b,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[2].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 983b917c8d931ec41a6bdecaa2ff1f6e,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[3].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 930bc8ead292ae144936dbff3badfb7b,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[4].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 930bc8ead292ae144936dbff3badfb7b,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[6].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 87fee339ce00f354c97b30858533b305,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[7].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 87fee339ce00f354c97b30858533b305,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[8].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 1321eb71d67790c409243ecdf81c81ac,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[9].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 87fee339ce00f354c97b30858533b305,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[11].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: fdd93f31830cf4d468c36506f61dc2a7,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[12].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: fdd93f31830cf4d468c36506f61dc2a7,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[14].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 983b917c8d931ec41a6bdecaa2ff1f6e,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[15].retrato
-      value: 
-      objectReference: {fileID: 21300000, guid: 11b45789f0289ed4980c49ad82422300,
-        type: 3}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
       propertyPath: conversacion.Array.data[15].opciones.Array.size
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: conversacion.Array.data[15].opciones.Array.data[0].textoBoton
-      value: Ire ahora mismo
       objectReference: {fileID: 0}
     - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
@@ -552,26 +335,17 @@ PrefabInstance:
       propertyPath: OnDialogoFinalizado.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: boton, Assembly-CSharp
       objectReference: {fileID: 0}
-    - target: {fileID: 8932549855351102149, guid: 22188650093959a48ba7f90edb09c088,
+    - target: {fileID: 8984731517380942305, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: -19.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8932549855351102149, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 10.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8932549855351102149, guid: 22188650093959a48ba7f90edb09c088,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
+      propertyPath: m_Type
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8932549855351102149, guid: 22188650093959a48ba7f90edb09c088,
+    - target: {fileID: 8984731517380942305, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 344
-      objectReference: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7c387a73b8dcb1b48b3f3f0de0518393,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
