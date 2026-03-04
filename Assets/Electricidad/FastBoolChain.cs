@@ -8,6 +8,9 @@ public class FastBoolChain : MonoBehaviour
     [Header("Estado")]
     public bool activo = false;
 
+    [Header("Fuente independiente (no necesita vecino)")]
+    public bool esFuente = false;
+
     [Header("Delay Activación")]
     public float delayActivacion = 0.5f;
 
@@ -15,71 +18,103 @@ public class FastBoolChain : MonoBehaviour
     public UnityEvent OnActivated;
     public UnityEvent OnDeactivated;
 
-    private HashSet<FastBoolChain> vecinosActivos = new HashSet<FastBoolChain>();
+    private HashSet<FastBoolChain> vecinosEnRango = new HashSet<FastBoolChain>();
     private Coroutine rutinaActivacion;
     private Renderer rend;
 
     void Awake()
     {
         rend = GetComponent<Renderer>();
+        if (esFuente) Activar();
         ActualizarVisual();
     }
 
-    public void NotificarCambioEstado(FastBoolChain vecino, bool estado)
+    void OnTriggerEnter(Collider other)
     {
-        if (estado)
-            vecinosActivos.Add(vecino);
-        else
-            vecinosActivos.Remove(vecino);
+        FastBoolChain vecino = other.GetComponent<FastBoolChain>();
+        if (vecino == null) return;
+
+        vecinosEnRango.Add(vecino);
+        vecino.vecinosEnRango.Add(this); // Registro mutuo
 
         EvaluarEstado();
+        vecino.EvaluarEstado(); // El vecino también evalúa
     }
 
-    void EvaluarEstado()
+    void OnTriggerExit(Collider other)
     {
-        bool hayConexion = vecinosActivos.Count > 0;
+        FastBoolChain vecino = other.GetComponent<FastBoolChain>();
+        if (vecino == null) return;
 
-        if (hayConexion && !activo)
+        vecinosEnRango.Remove(vecino);
+        vecino.vecinosEnRango.Remove(this); // Limpieza mutua
+
+        EvaluarEstado();
+        vecino.EvaluarEstado(); // El vecino también reevalúa
+    }
+
+    public void EvaluarEstado()
+    {
+        if (esFuente) return;
+
+        bool hayVecinoActivo = HayVecinoActivo();
+
+        if (hayVecinoActivo && !activo)
         {
-            // Iniciar delay si no está ya en proceso
             if (rutinaActivacion == null)
                 rutinaActivacion = StartCoroutine(ActivacionConDelay());
         }
-        else if (!hayConexion)
+        else if (!hayVecinoActivo)
         {
-            // Cancelar activación pendiente
             if (rutinaActivacion != null)
             {
                 StopCoroutine(rutinaActivacion);
                 rutinaActivacion = null;
             }
 
-            // Si estaba activo, desactivar inmediatamente
-            if (activo)
-                Desactivar();
+            if (activo) Desactivar();
         }
+    }
+
+    bool HayVecinoActivo()
+    {
+        foreach (var v in vecinosEnRango)
+            if (v != null && v.activo) return true;
+        return false;
     }
 
     IEnumerator ActivacionConDelay()
     {
         yield return new WaitForSeconds(delayActivacion);
 
-        // Confirmar que sigue habiendo conexión
-        if (vecinosActivos.Count > 0)
-        {
-            activo = true;
-            OnActivated?.Invoke();
-            ActualizarVisual();
-        }
+        if (HayVecinoActivo() && !activo)
+            Activar();
 
         rutinaActivacion = null;
+    }
+
+    void Activar()
+    {
+        activo = true;
+        ActualizarVisual();
+        OnActivated?.Invoke();
+
+        // Notificar a vecinos en rango que este nodo se activó
+        foreach (var v in vecinosEnRango)
+            if (v != null && !v.activo && !v.esFuente)
+                v.EvaluarEstado();
     }
 
     void Desactivar()
     {
         activo = false;
-        OnDeactivated?.Invoke();
         ActualizarVisual();
+        OnDeactivated?.Invoke();
+
+        // Notificar a vecinos que este nodo se desactivó
+        foreach (var v in vecinosEnRango)
+            if (v != null && !v.esFuente)
+                v.EvaluarEstado();
     }
 
     void ActualizarVisual()

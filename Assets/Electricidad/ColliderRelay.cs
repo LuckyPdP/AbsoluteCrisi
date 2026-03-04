@@ -16,9 +16,9 @@ public class ColliderRelay : MonoBehaviour
 
         if (otro != null && otro != padre)
         {
-            padre.NotificarCambioEstado(otro, otro.activo);
-            otro.OnActivated.AddListener(() => padre.NotificarCambioEstado(otro, true));
-            otro.OnDeactivated.AddListener(() => padre.NotificarCambioEstado(otro, false));
+       //     padre.NotificarCambioEstado(otro, otro.activo);
+       //     otro.OnActivated.AddListener(() => padre.NotificarCambioEstado(otro, true));
+        //    otro.OnDeactivated.AddListener(() => padre.NotificarCambioEstado(otro, false));
         }
     }
 
@@ -28,7 +28,7 @@ public class ColliderRelay : MonoBehaviour
 
         if (otro != null && otro != padre)
         {
-            padre.NotificarCambioEstado(otro, false);
+         //   padre.NotificarCambioEstado(otro, false);
         }
     }
 }

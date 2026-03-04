@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
+  esFuente: 0
   delayActivacion: 0.5
   OnActivated:
     m_PersistentCalls:
@@ -550,7 +551,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 0.8459386, z: 0.20000002}
   m_Center: {x: -0.000000116403015, y: 0.13430287, z: 0}
@@ -886,22 +887,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
+  esFuente: 0
   delayActivacion: 0.5
   OnActivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 509938252}
-        m_TargetAssemblyTypeName: DialogoManager2D, Assembly-CSharp
-        m_MethodName: IniciarDialogo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
+      m_Calls: []
   OnDeactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -947,8 +937,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1, y: 2.325984, z: 0.2}
+  m_Center: {x: -4.404135e-10, y: -0.66299105, z: 0}
 --- !u!212 &262016417
 SpriteRenderer:
   serializedVersion: 2
@@ -1019,7 +1009,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7088, w: 0.7054095}
   m_LocalPosition: {x: -1.7, y: -3.34, z: 0}
-  m_LocalScale: {x: 1.5374151, y: 1.5374151, z: 1.5374151}
+  m_LocalScale: {x: 1.0482097, y: 1.0482097, z: 1.0482097}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 317442786}
@@ -2678,7 +2668,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7088, w: 0.7054095}
   m_LocalPosition: {x: -0.04, y: 2.29, z: 0}
-  m_LocalScale: {x: 1.5374151, y: 1.5374151, z: 1.5374151}
+  m_LocalScale: {x: 1.2682753, y: 1.9025512, z: 1.5374151}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1800298271}
@@ -2724,7 +2714,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
-  delayActivacion: 0.5
+  esFuente: 0
+  delayActivacion: 0.1
   OnActivated:
     m_PersistentCalls:
       m_Calls:
@@ -2931,22 +2922,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
+  esFuente: 0
   delayActivacion: 0.5
   OnActivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 509938252}
-        m_TargetAssemblyTypeName: DialogoManager2D, Assembly-CSharp
-        m_MethodName: IniciarDialogo
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
+      m_Calls: []
   OnDeactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -2992,8 +2972,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.0548232, y: 1, z: 0.2}
+  m_Center: {x: 0.0029563792, y: -1.7860713e-14, z: 0}
 --- !u!212 &1428154869
 SpriteRenderer:
   serializedVersion: 2
@@ -3064,7 +3044,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7088, w: 0.7054095}
   m_LocalPosition: {x: -4.67, y: -3.34, z: 0}
-  m_LocalScale: {x: 1.5374151, y: 1.5374151, z: 1.5374151}
+  m_LocalScale: {x: 1.0482097, y: 1.0482097, z: 1.0482097}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 100270328}
@@ -3225,6 +3205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
+  esFuente: 0
   delayActivacion: 0.5
   OnActivated:
     m_PersistentCalls:
@@ -3845,6 +3826,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 1
+  esFuente: 1
   delayActivacion: 0.2
   OnActivated:
     m_PersistentCalls:
