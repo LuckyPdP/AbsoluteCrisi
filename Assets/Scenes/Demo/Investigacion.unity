@@ -312,6 +312,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
+      propertyPath: conversacion.Array.data[2].lado
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[3].lado
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[7].lado
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[8].lado
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[12].lado
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[14].lado
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[7].texto
+      value: "(Recorro con delicadeza la m\xE1scara del traje.)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[12].texto
+      value: '(Asiento con la cabeza)
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
       propertyPath: conversacion.Array.data[15].opciones.Array.size
       value: 0
       objectReference: {fileID: 0}
@@ -1083,7 +1125,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}

@@ -6,7 +6,7 @@ public class MenuPausa2D : MonoBehaviour
 {
 
     public GameObject MenuDePausa;
-    public string Samplescene;
+    public string Reinicio;
     public string MenudeInicio;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -65,7 +65,7 @@ public class MenuPausa2D : MonoBehaviour
     public void Reiniciar()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(Samplescene);
+        SceneManager.LoadScene(Reinicio);
     }
 
     public void MenuDeInicio()

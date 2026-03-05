@@ -4,7 +4,7 @@ public class cambio_escena : MonoBehaviour
 {
     public string Samplescene;
 
-    void Cambiarjuego()
+    public void CambiarEscena()
     {
         SceneManager.LoadScene(Samplescene);
     }

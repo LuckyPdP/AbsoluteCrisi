@@ -4177,8 +4177,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuPausa
   MenuDePausa: {fileID: 1326833310}
-  Samplescene: EscenaJuegoFinalDemo
-  MenudeInicio: EscenaJuegoFinalDemo
+  Samplescene: Electricidad
+  MenudeInicio: Electricidad
 --- !u!4 &1563548994
 Transform:
   m_ObjectHideFlags: 0

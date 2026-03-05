@@ -217,6 +217,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1764436658748601054, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3081720393847469452, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_Pivot.x
@@ -327,6 +332,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4385199225581188716, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 234
+      objectReference: {fileID: 0}
     - target: {fileID: 4505558943343153076, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_IsActive
@@ -337,6 +347,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogos 2d
       objectReference: {fileID: 0}
+    - target: {fileID: 5354929921356594068, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615915364678234625, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 873b0d986d657d14b8ca7caaaf62158c,
+        type: 3}
     - target: {fileID: 7656910221450627332, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: m_fontColor.b
@@ -510,6 +531,12 @@ PrefabInstance:
       propertyPath: conversacion.Array.data[16].texto
       value: "ERIS:\n\u2014 Si sientes mareos\u2026 ve a mi oficina."
       objectReference: {fileID: 0}
+    - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
+        type: 3}
+      propertyPath: conversacion.Array.data[0].retrato
+      value: 
+      objectReference: {fileID: 21300000, guid: 873b0d986d657d14b8ca7caaaf62158c,
+        type: 3}
     - target: {fileID: 8785693979804358267, guid: 22188650093959a48ba7f90edb09c088,
         type: 3}
       propertyPath: conversacion.Array.data[1].retrato
@@ -712,7 +739,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.754717, g: 0.754717, b: 0.754717, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -844,7 +871,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1649,7 +1676,7 @@ PrefabInstance:
     - target: {fileID: 8371977767754517139, guid: d65e99f27f5b3c940b9ef31428f00d13,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
