@@ -3,7 +3,7 @@ using UnityEngine;
 public class SnapTarget : MonoBehaviour
 {
     public bool IsOccupied { get; private set; } = false;
-    private DragAndSnapMulti currentPiece;
+    public DragAndSnapMulti currentPiece;
 
     public bool TrySnap(DragAndSnapMulti piece)
     {

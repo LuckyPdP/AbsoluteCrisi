@@ -7,8 +7,9 @@ public class DragAndSnapMulti : MonoBehaviour
 
     private bool isDragging = false;
     private Vector3 offset;
-    private SnapTarget currentTarget = null;
+    public SnapTarget currentTarget = null;
 
+   
     void OnMouseDown()
     {
         isDragging = true;

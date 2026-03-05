@@ -211,6 +211,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19796671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987102558312517360, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+    type: 3}
+  m_PrefabInstance: {fileID: 5899579423134349417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e815f42429e0124e94b00df07ff77fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndSnap
 --- !u!1 &23124822
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +376,8 @@ MonoBehaviour:
   - {fileID: 999327932}
   - {fileID: 381977553}
   - {fileID: 396677279}
-  snapDistance: 3
+  snapDistance: 3.5
+  currentTarget: {fileID: 0}
 --- !u!65 &144556918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1942,7 +1955,8 @@ MonoBehaviour:
   - {fileID: 999327932}
   - {fileID: 381977553}
   - {fileID: 396677279}
-  snapDistance: 3
+  snapDistance: 3.5
+  currentTarget: {fileID: 0}
 --- !u!65 &1462877266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2508,7 +2522,8 @@ MonoBehaviour:
   - {fileID: 999327932}
   - {fileID: 381977553}
   - {fileID: 396677279}
-  snapDistance: 3
+  snapDistance: 3.5
+  currentTarget: {fileID: 0}
 --- !u!65 &1894053508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2633,6 +2648,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ficha Recta V
       objectReference: {fileID: 0}
+    - target: {fileID: 1987102558312517360, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: snapDistance
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987102558312517360, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: currentTarget
+      value: 
+      objectReference: {fileID: 1839481103}
     - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
       propertyPath: m_Size.y
@@ -2672,6 +2697,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254347070503124832, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 2.372221
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254347070503124832, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.68611056
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254347070503124832, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.y
+      value: -0.6629911
       objectReference: {fileID: 0}
     - target: {fileID: 4277608038045521713, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
@@ -2808,6 +2848,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7081923953923216564, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: currentPiece
+      value: 
+      objectReference: {fileID: 19796671}
     - target: {fileID: 7279768987323485874, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -2827,6 +2872,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.y
       value: 0.17128849
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741829722778605541, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: snapDistance
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7977382643525044640, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
