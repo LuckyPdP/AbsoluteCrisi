@@ -2598,6 +2598,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 831904694217483046, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0380785
+      objectReference: {fileID: 0}
+    - target: {fileID: 831904694217483046, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.20000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 831904694217483046, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.019039404
+      objectReference: {fileID: 0}
     - target: {fileID: 963604690281381148, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2617,6 +2632,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ficha Recta V
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.8822923
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000001007133
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.11612614
       objectReference: {fileID: 0}
     - target: {fileID: 2138539587218636585, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
@@ -2782,6 +2812,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512189177465727162, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.9199099
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512189177465727162, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.00000009399323
+      objectReference: {fileID: 0}
+    - target: {fileID: 7512189177465727162, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.17128849
       objectReference: {fileID: 0}
     - target: {fileID: 7977382643525044640, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
