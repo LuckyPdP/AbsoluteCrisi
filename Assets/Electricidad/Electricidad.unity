@@ -347,7 +347,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
   esFuente: 0
+  esDestino: 0
   delayActivacion: 0.5
+  intervaloCheck: 0.1
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
@@ -378,6 +380,12 @@ MonoBehaviour:
   - {fileID: 396677279}
   snapDistance: 3.5
   currentTarget: {fileID: 0}
+  CuandoArrastras:
+    m_PersistentCalls:
+      m_Calls: []
+  CuandoSueltas:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &144556918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -510,7 +518,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 0.8459386, z: 0.20000002}
   m_Center: {x: -0.000000116403015, y: 0.13430287, z: 0}
@@ -995,7 +1003,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 0.8459386, z: 0.20000002}
   m_Center: {x: -0.000000116403015, y: 0.13430287, z: 0}
@@ -1517,7 +1525,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 0.8459386, z: 0.20000002}
   m_Center: {x: -0.000000116403015, y: 0.13430287, z: 0}
@@ -1644,7 +1652,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 0.8459386, z: 0.20000002}
   m_Center: {x: -0.000000116403015, y: 0.13430287, z: 0}
@@ -1926,7 +1934,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
   esFuente: 0
+  esDestino: 0
   delayActivacion: 0.5
+  intervaloCheck: 0.1
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
@@ -1957,6 +1967,12 @@ MonoBehaviour:
   - {fileID: 396677279}
   snapDistance: 3.5
   currentTarget: {fileID: 0}
+  CuandoArrastras:
+    m_PersistentCalls:
+      m_Calls: []
+  CuandoSueltas:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1462877266
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2493,7 +2509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FastBoolChain
   activo: 0
   esFuente: 0
+  esDestino: 0
   delayActivacion: 0.5
+  intervaloCheck: 0.1
   OnActivated:
     m_PersistentCalls:
       m_Calls: []
@@ -2524,6 +2542,12 @@ MonoBehaviour:
   - {fileID: 396677279}
   snapDistance: 3.5
   currentTarget: {fileID: 0}
+  CuandoArrastras:
+    m_PersistentCalls:
+      m_Calls: []
+  CuandoSueltas:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!65 &1894053508
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2543,8 +2567,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 2.325984, z: 0.2}
-  m_Center: {x: -4.404135e-10, y: -0.66299105, z: 0}
+  m_Size: {x: 2.344908, y: 2.325984, z: 0.2}
+  m_Center: {x: 0.67245173, y: -0.66299117, z: 0}
 --- !u!212 &1894053509
 SpriteRenderer:
   serializedVersion: 2
@@ -2630,6 +2654,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 963604690281381148, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
+      propertyPath: esDestino
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 963604690281381148, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: delayActivacion
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 963604690281381148, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
       propertyPath: OnActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 23124823}
@@ -2665,6 +2699,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2045672080373269034, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
       propertyPath: m_Center.x
       value: -0.0000001007133
       objectReference: {fileID: 0}
@@ -2681,6 +2720,11 @@ PrefabInstance:
     - target: {fileID: 2138539587218636585, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2157948085652799848, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3173710592167116596, guid: fb47c76f4f8484e40b9bae0f3ce69330,
@@ -2772,6 +2816,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: -6.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 4917680496249056462, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6455691717727528035, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
@@ -2887,6 +2936,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710982808976501527, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8838458838435597019, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}

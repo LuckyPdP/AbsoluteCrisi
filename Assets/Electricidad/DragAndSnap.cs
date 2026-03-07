@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
+using System.Collections.Generic;
 
 public class DragAndSnapMulti : MonoBehaviour
 {
@@ -9,19 +12,12 @@ public class DragAndSnapMulti : MonoBehaviour
     private Vector3 offset;
     public SnapTarget currentTarget = null;
 
-   
-    void OnMouseDown()
-    {
-        isDragging = true;
-        offset = transform.position - GetMouseWorldPosition();
 
-        // Si estaba ocupando un target, lo liberamos
-        if (currentTarget != null)
-        {
-            currentTarget.Release();
-            currentTarget = null;
-        }
-    }
+    public UnityEvent CuandoArrastras;
+    public UnityEvent CuandoSueltas;
+
+
+
 
     void OnMouseDrag()
     {
@@ -34,6 +30,7 @@ public class DragAndSnapMulti : MonoBehaviour
     void OnMouseUp()
     {
         isDragging = false;
+        CuandoSueltas?.Invoke();
 
         SnapTarget closestTarget = GetClosestAvailableTarget();
 
@@ -47,10 +44,28 @@ public class DragAndSnapMulti : MonoBehaviour
                 {
                     transform.position = closestTarget.transform.position;
                     currentTarget = closestTarget;
+
+                    GetComponent<FastBoolChain>()?.NotificarMovimiento();
                 }
             }
         }
     }
+
+    void OnMouseDown()
+    {
+        isDragging = true;
+        offset = transform.position - GetMouseWorldPosition();
+
+        if (currentTarget != null)
+        {
+            currentTarget.Release();
+            currentTarget = null;
+            GetComponent<FastBoolChain>()?.NotificarMovimiento();
+        }
+
+        CuandoArrastras?.Invoke();
+    }
+
 
     SnapTarget GetClosestAvailableTarget()
     {
