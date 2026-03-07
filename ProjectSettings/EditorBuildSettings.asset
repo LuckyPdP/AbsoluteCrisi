@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Casa y pasillo.unity
     guid: 265eff132889a2f4b8bd5e6ab176255e
   - enabled: 1
-    path: Assets/Electricidad/Electricidad.unity
+    path: Assets/Scenes/Puzzles/Electricidad.unity
     guid: 8c29b0b3d42810a4eb86ebab742483f9
   - enabled: 1
     path: Assets/Scenes/Demo/EscenaJuegoFinalDemo.unity
