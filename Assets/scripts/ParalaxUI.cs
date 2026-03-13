@@ -3,7 +3,7 @@ using UnityEngine;
 public class ParalaxUI : MonoBehaviour
 {
     [Header("Ajustes de Movimiento")]
-    [Tooltip("Cantidad máxima de píxeles que se moverá la imagen.")]
+    [Tooltip("Cantidad máxima de pú•eles que se moverEla imagen.")]
     public float cantidadMovimiento = 50f;
     public float suavidad = 5f;
 
@@ -31,7 +31,7 @@ public class ParalaxUI : MonoBehaviour
         // Determinamos la dirección (normal o invertida)
         float multiplicador = invertirMovimiento ? -1f : 1f;
 
-        // Calculamos a dónde debería ir la imagen
+        // Calculamos a dónde deberú} ir la imagen
         Vector2 posicionObjetivo = new Vector2(
             posicionInicial.x + (mouseX * cantidadMovimiento * multiplicador),
             posicionInicial.y + (mouseY * cantidadMovimiento * multiplicador)
