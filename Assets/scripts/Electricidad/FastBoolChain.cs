@@ -14,6 +14,9 @@ public class FastBoolChain : MonoBehaviour
     [Header("Batería central (destino final)")]
     public bool esDestino = false;
 
+    [Header("Ignorar Snap (conduce sin estar snapeado)")]
+    public bool ignorarSnap = false; // <--- NUEVO
+
     [Header("Delay Activación")]
     public float delayActivacion = 0.5f;
 
@@ -28,10 +31,7 @@ public class FastBoolChain : MonoBehaviour
     private Coroutine rutinaActivacion;
     private Renderer rend;
 
-    // Para evitar disparar OnActivated/OnDeactivated más de una vez
     private bool estadoAnterior = false;
-
-    //   Unity Lifecycle  
 
     void Awake()
     {
@@ -47,11 +47,8 @@ public class FastBoolChain : MonoBehaviour
             ActualizarVisual();
         }
 
-        // Cada nodo arranca su propio loop de comprobación
         StartCoroutine(LoopComprobacion());
     }
-
-    //   Loop continuo  
 
     IEnumerator LoopComprobacion()
     {
@@ -70,18 +67,14 @@ public class FastBoolChain : MonoBehaviour
 
         if (debeEstarActivo && !activo)
         {
-            // Iniciar activación con delay si no hay una ya en marcha
             if (rutinaActivacion == null)
                 rutinaActivacion = StartCoroutine(ActivacionConDelay());
         }
         else if (!debeEstarActivo && activo)
         {
-            // Apagar inmediatamente
             CancelarActivacionYApagar();
         }
     }
-
-    //   Triggers (solo registran vecinos, no propagan)  
 
     void OnTriggerEnter(Collider other)
     {
@@ -98,11 +91,8 @@ public class FastBoolChain : MonoBehaviour
         vecinosEnRango.Remove(vecino);
         vecino.vecinosEnRango.Remove(this);
 
-        // Al separar físicamente sí forzamos evaluación inmediata
         if (activo) CancelarActivacionYApagar();
     }
-
-    //   Activación / Desactivación  
 
     void CancelarActivacionYApagar()
     {
@@ -124,22 +114,19 @@ public class FastBoolChain : MonoBehaviour
             yield break;
         }
 
-        // Actualizar estado y visual primero
         activo = true;
         ActualizarVisual();
         rutinaActivacion = null;
 
-        // Si es el destino, esperar a que el resto del camino también esté activo
         if (esDestino)
         {
-            // Timeout de seguridad para evitar espera infinita
             float tiempoEspera = 0f;
             float timeout = delayActivacion * 10f + 2f;
 
             while (!TodosLosNodosDelCaminoActivos())
             {
                 tiempoEspera += Time.deltaTime;
-                if (tiempoEspera >= timeout) break; // evitar loop infinito
+                if (tiempoEspera >= timeout) break;
                 yield return null;
             }
         }
@@ -167,17 +154,11 @@ public class FastBoolChain : MonoBehaviour
             rend.material.color = activo ? Color.green : Color.red;
     }
 
-    //   BFS auxiliares  
-
-    /// <summary>
-    /// Recorre el grafo desde este nodo hacia atrás buscando una fuente.
-    /// No depende de que los vecinos estén "activos", solo de que estén conectados.
-    /// </summary>
     bool EsAlcanzableDesdefuente()
     {
-        // Si este nodo no está snapeado (y no es fuente/destino fijo), no puede conducir
         var drag = GetComponent<DragAndSnapMulti>();
-        if (drag != null && drag.currentTarget == null) return false;
+        // Si no ignora snap y no está snapeado, no conduce
+        if (drag != null && drag.currentTarget == null && !ignorarSnap) return false;
 
         HashSet<FastBoolChain> visitados = new HashSet<FastBoolChain>();
         Queue<FastBoolChain> cola = new Queue<FastBoolChain>();
@@ -193,9 +174,9 @@ public class FastBoolChain : MonoBehaviour
             {
                 if (v != null && !visitados.Contains(v))
                 {
-                    // Cada vecino también debe estar snapeado para conducir
                     var vDrag = v.GetComponent<DragAndSnapMulti>();
-                    if (vDrag != null && vDrag.currentTarget == null) continue;
+                    // Igual para cada vecino: si ignora snap, pasa siempre
+                    if (vDrag != null && vDrag.currentTarget == null && !v.ignorarSnap) continue;
 
                     visitados.Add(v);
                     cola.Enqueue(v);
@@ -205,10 +186,6 @@ public class FastBoolChain : MonoBehaviour
         return false;
     }
 
-    /// <summary>
-    /// Para el destino final: comprueba que todos los nodos alcanzables
-    /// desde la fuente ya tienen activo = true (visual actualizado).
-    /// </summary>
     bool TodosLosNodosDelCaminoActivos()
     {
         FastBoolChain[] todos = FindObjectsByType<FastBoolChain>(FindObjectsSortMode.None);
@@ -233,15 +210,8 @@ public class FastBoolChain : MonoBehaviour
         return true;
     }
 
-    //   API Pública  
-
     public void NotificarMovimiento()
     {
-        // Ya no es necesario llamar PropagateFromSources,
-        // el loop se encarga. Pero se puede forzar una evaluación inmediata:
         if (!esFuente) EvaluarConexion();
     }
-
-    
-
 }
