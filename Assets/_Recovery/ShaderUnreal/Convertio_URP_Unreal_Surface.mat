@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Convertio_URP_Unreal_Surface
+  m_Shader: {fileID: 4800000, guid: e8f5602c051ed9c4f960ab138f8b0d5d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _TexturaSpecular:
+        m_Texture: {fileID: 2800000, guid: 6a593afbf1b2a5f46aae872416bc9758, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureDiffuse2:
+        m_Texture: {fileID: 2800000, guid: 2bdae6318e7d9054eb5fd4fc081537e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureDiffusin3:
+        m_Texture: {fileID: 2800000, guid: 2bdae6318e7d9054eb5fd4fc081537e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureDiffusion:
+        m_Texture: {fileID: 2800000, guid: 6a593afbf1b2a5f46aae872416bc9758, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureDiffusion4:
+        m_Texture: {fileID: 2800000, guid: 2bdae6318e7d9054eb5fd4fc081537e1, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _CastShadowThreshold: 0.018
+    - _CorteSuaveSpecular: 0
+    - _FuerzaNoise: 3
+    - _FuerzaSpecular: 0.84
+    - _Metallic: 0
+    - _OpacidadSpecular: 0.5
+    - _OutlineThickness: 0.005
+    - _PosicionColorD: 0.684
+    - _PosiconColorC: 0.36
+    - _RangoToonShader: 0.491138
+    - _RimPower: 3
+    - _RimThreshold: 0.5
+    - _Roughness: 1
+    - _ShadowCoverage: -0.32
+    m_Colors:
+    - _ColorA: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorB: {r: 0.927083, g: 0.927083, b: 0.927083, a: 1}
+    - _ColorC: {r: 0.588542, g: 0.588542, b: 0.588542, a: 1}
+    - _ColorD: {r: 0.13541695, g: 0.13541695, b: 0.13541695, a: 1}
+    - _ColorSpecular: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _PasoTiempo: {r: 1, g: 1, b: 0, a: 1}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _UVTamaoPaso: {r: 0.5, g: 0.5, b: 0, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1
