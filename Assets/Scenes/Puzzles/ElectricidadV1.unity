@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41966ece28bb5b145a51cf52b5563dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnapTarget
-  currentPiece: {fileID: 0}
+  currentPiece: {fileID: 2120917700}
 --- !u!212 &142589996
 SpriteRenderer:
   serializedVersion: 2
@@ -593,6 +593,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -795,6 +796,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -893,6 +895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 283553909}
   - component: {fileID: 283553908}
+  - component: {fileID: 283553910}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -980,6 +983,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &283553910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283553907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.UniversalAdditionalLightData
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_CustomShadowLayers: 0
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 0
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ShadowRenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_Version: 4
+  m_LightLayerMask: 1
+  m_ShadowLayerMask: 1
+  m_RenderingLayers: 1
+  m_ShadowRenderingLayers: 1
 --- !u!1 &467813585
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1253,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -1424,6 +1457,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -2186,6 +2220,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4917680496249056462, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6455691717727528035, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2338,6 +2377,11 @@ PrefabInstance:
       objectReference: {fileID: 142589995}
     - target: {fileID: 7741829722778605541, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
+      propertyPath: initialTarget
+      value: 
+      objectReference: {fileID: 142589995}
+    - target: {fileID: 7741829722778605541, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
       propertyPath: targetPoints.Array.size
       value: 12
       objectReference: {fileID: 0}
@@ -2385,6 +2429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710982808976501527, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+        type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8759999355658898310, guid: fb47c76f4f8484e40b9bae0f3ce69330,
         type: 3}
@@ -2965,6 +3014,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -4241,6 +4291,7 @@ MonoBehaviour:
   - {fileID: 1798619337}
   - {fileID: 1608170318}
   snapDistance: 3.5
+  initialTarget: {fileID: 0}
   currentTarget: {fileID: 0}
   CuandoArrastras:
     m_PersistentCalls:
@@ -4869,6 +4920,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2120917700 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7741829722778605541, guid: fb47c76f4f8484e40b9bae0f3ce69330,
+    type: 3}
+  m_PrefabInstance: {fileID: 949474045}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e815f42429e0124e94b00df07ff77fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DragAndSnap
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
